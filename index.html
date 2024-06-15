@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project ZULF</title>
+    <link rel="stylesheet" href="stylePrj.css" />
+    <link
+      rel="icon"
+      href="Jammu_and_Kashmir_Tourism_Logo.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.0.0-beta2/css/all.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="nav-logo">
+          <div class="logo">
+            <img src="Jammu_and_Kashmir_Tourism_Logo.png" alt="LOGO " />
+          </div>
+        </div>
+        <div class="nav-menu">
+          <button class="nav-dropdown-btn">&#9776;</button>
+          <div class="nav-links">
+            <a href="dashboard.html">Home</a>
+          </div>
+          <div class="nav-links">
+            <a href="aboutzulf.html">About</a>
+          </div>
+          <div class="nav-links">
+            <a href="#destinations">Destinations</a>
+          </div>
+          <div class="nav-links">
+            <a href="thingstodo.html">Things to Do</a>
+          </div>
+          <div class="nav-links">
+            <a href="gallery.html">Gallery</a>
+          </div>
+          <div class="nav-links">
+            <a href="#messageus">Message Us</a>
+          </div>
+      
+        </div>
+
+        <script>      
+          // Function to toggle the dropdown menu
+          function toggleDropdown() {
+            const navMenu = document.querySelector(".nav-menu");
+            navMenu.classList.toggle("show-dropdown");
+          }
+
+          // Event listener for the dropdown button
+          const dropdownButton = document.querySelector(".nav-dropdown-btn");
+          dropdownButton.addEventListener("click", toggleDropdown);
+
+          // Event listener for the nav links to close the dropdown on clicking a link
+          const navLinks = document.querySelectorAll(".nav-links a");
+          navLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+              const navMenu = document.querySelector(".nav-menu");
+              navMenu.classList.remove("show-dropdown");
+            });
+          });
+        </script>
+
+        <div class="nav-search">
+          <input placeholder="*Search Here" class="search-input" />
+          <div class="search-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <!-- here i will add a functionality  such that the user can click on the icon to perform search -->
+          </div>
+        </div>
+        <div class="boatgif">
+          <img src="istockphoto-1094747868-640x640.jpg" alt="Gif" />
+        </div>
+        <div class="logout">
+          <p><a href="logout.php">Logout</a></p>
+        </div>
+      </div>
+    </header>
+
+    <div class="welcomespace">
+      <img
+        src="kashmir_beauty_cropped-mr.jpg"
+        alt="Mountain beauty of Jammu & kashmir"
+      />
+      <div class="text_content">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+                url: 'dashboard.php', // The PHP script to fetch the username
+                method: 'GET',
+                success: function(response) {
+                    $('#username').text(response); // Update the element with the username
+                }
+            });
+        });
+    </script>
+  <h1>Welcome<span id="#username"></span>!</h1>
+   
+    <p>
+      "Unexplored J&K is an initiative committed to unveiling the uncharted beauty and information of Jammu and Kashmir, seamlessly presenting diverse destinations, activities, and local insights in a comprehensive and visually engaging platform for travelers and enthusiasts."</p>
+      </div>
+    </div>
+    <hr />
+
+    <!-- Cards Section -->
+
+    <section class="filter-section">
+      <button class="filter-btn" data-category="all">All</button>
+      <button class="filter-btn" data-category="religious">Religious</button>
+      <button class="filter-btn" data-category="mountains">Mountains</button>
+      <!-- Add similar buttons for other categories -->
+    </section>
+
+    
+    <section class="destinations" id="destinations">
+      <h1>Destinations-</h1>
+      <div class="destination-card" data-category="mountains">
+        <img src="kashmir_beauty_cropped-mr.jpg" alt="Destination 1" />
+        <h3>Srinagar (Mountainous Region)</h3>
+        <p>
+          Srinagar, the summer capital of Jammu and Kashmir, is famous for its
+          breathtaking landscapes, serene Dal Lake, and houseboats. Include
+          information about houseboat stays, shikara rides, gardens, and local
+          attractions..
+        </p>
+        <a href="Srinagardestination.html">Learn More</a>
+      </div>
+
+      <div class="destination-card" data-category="mountains">
+        <img
+          src="ff0ad8dc24f438a7dc6edfe0e4a90403.jpg"
+          alt="Destination 2"
+        />
+        <h3>Gulmarg (Mountainous Region)</h3>
+        <p>
+          Gulmarg is a popular hill station known for its skiing and
+          snowboarding opportunities during winters. In summers, it offers
+          scenic meadows and a golf course. Include details about ski resorts,
+          Gondola rides, and hiking options..
+        </p>
+        <a href="Gulmargdestination.html">Learn More</a>
+      </div>
+
+      <div class="destination-card" data-category="mountains">
+        <img src="R1.jpeg" alt="Destination 3" />
+        <h3>Pahalgam (Mountainous Region)</h3>
+        <p>
+          Pahalgam is known for its scenic beauty, lush green valleys, and the
+          starting point for the Amarnath Yatra pilgrimage. Include information
+          about treks, river rafting, and the annual Amarnath Yatra
+        </p>
+        <a href="pahalgamdestination.html">Learn More</a>
+      </div>
+
+      <div class="destination-card" data-category="religious">
+        <img src="Vaishno-devi.jpg" alt="Destination 4" />
+        <h3>Vaishno Devi (Religious Place)</h3>
+        <p>
+          Vaishno Devi is a famous Hindu pilgrimage site dedicated to Goddess
+          Vaishno Devi. It is visited by millions of devotees every year.
+          Include details about the pilgrimage, yatra registration, and nearby
+          attractions.
+        </p>
+        <a href="vaishnodevidestination.html">Learn More</a>
+      </div>
+
+      <div class="destination-card" data-category="religious">
+        <img src="kashmir.png" alt="Destination 5" />
+        <h3>Amarnath Cave (Religious Place)</h3>
+        <p>
+          The Amarnath Cave is a sacred site for Hindus, known for its natural
+          ice Shiva Lingam formed inside the cave. Include information about the
+          annual Amarnath Yatra, route, and the significance of the pilgrimage.
+        </p>
+        <a href="amarnathcavedestination.html">Learn More</a>
+      </div>
+
+      <div class="destination-card" data-category="religious mountains">
+        <img
+          src="istockphoto-1094747868-640x640.jpg"
+          alt="Destination 6"
+        />
+        <h3>Hemis Monastery (Religious Place and Mountainous Region)</h3>
+        <p>
+          Hemis Monastery is one of the largest and most famous monasteries in
+          Ladakh. It offers a glimpse of Buddhist culture and spirituality
+          amidst the scenic landscapes of Ladakh. Include details about the
+          monastery, festivals, and cultural experiences..
+        </p>
+        <a href="hemismonasterydestination.html">Learn More</a>
+      </div>
+
+    </section>
+
+    <hr />
+
+    <section>
+      <div class="messageus" id="messageus">
+        <div class="messagebox">
+          <h2>Message Us / Feedback</h2>
+
+          <!-- yha pr message ka status show hoga -->
+          <div
+            id="message-status"
+            style="
+              border: 1px solid #ccc;
+              border-radius: 2px;
+              background-color: #c17b7b;
+              font-size: 16px;
+              color: #1f1616;
+            "
+          ></div>
+
+          <input type="text" id="name" placeholder="Your Name" />
+          <textarea id="message" placeholder="Your Message"></textarea>
+          <button id="submit-btn">Send Message</button>
+
+          <span style="color: rgb(50, 50, 92); margin: 40px">OR</span>
+
+          <a
+            href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=singhsimarjeet3478@gmail.com&tf=1"
+            style="margin: 10px"
+            >@Email</a
+          >
+
+          <div class="messagegif">
+            <img src="messageme.gif" alt="gif_message" />
+          </div>
+        </div>
+
+        <div class="messages">
+          <!-- Messages from users will be displayed here -->
+        </div>
+      </div>
+    </section>
+
+    <hr />
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p>Email: singhsimarjeet3478@gmail.com</p>
+          <p>Phone: +91 774-000-4332</p>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="dashboard.html" rel="noopener noreferrer">Home</a></li>
+            <li><a href="aboutzulf.html"  rel="noopener noreferrer" target="_blank">About</a></li>
+            <li><a href="gallery.html"  rel="noopener noreferrer" target="_blank">Gallery</a></li>
+            <li><a href="https://simarjeetxsingh.github.io/SIMAR_PORTFOLIO/"  rel="noopener noreferrer" target="_blank"> Developer's Portfolio</a></li>
+          </ul>
+        </div>
+        <!-- Your other footer content here -->
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/simarxjeet" class="icon-link" title="LinkedIn Profile" rel="noopener noreferrer"  target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <!-- LinkedIn icon -->
+            <a href="https://replit.com/@SimarjeetSing10" class="icon-link" title="Replit Profile"  rel="noopener noreferrer"  target="_blank"  >
+              <i class="fas fa-code"></i>
+            </a>
+            <!-- Code/Terminal icon  replit vaste use kita me-->
+            <a href="https://twitter.com/simarxjeet" class="icon-link" title="Twitter Profile"  rel="noopener noreferrer"  target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/simarxjeet/" class="icon-link" title="Instagram Profile" rel="noopener noreferrer"  target="_blank" >
+              <i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <p class="footer-copyright">© 2023 Project ZULF. All rights reserved. *</p>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const destinationCards = document.querySelectorAll(".destination-card");
+
+      // Add click event listener to each filter button
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const category = button.getAttribute("data-category");
+          filterDestinations(category);
+        });
+      });
+
+      // Function to filter destinations based on category
+      function filterDestinations(category) {
+        destinationCards.forEach((card) => {
+          const cardCategories = card.getAttribute("data-category");
+          if (category === "all" || cardCategories.includes(category)) {
+            card.style.display = "block";
+            card.style.animation = "slight 4s ease";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      }
+
+      // Function to handle the submission of the message
+      function sendMessage() {
+        const name = document.getElementById("name").value;
+        const message = document.getElementById("message").value;
+
+        // Check if both name and message are filled
+        if (!name || !message) {
+          alert("Please fill in both the name and message fields.");
+          return;
+        }
+
+        // Limit the message to 50 words
+        const messageWordCount = message.split(/\s+/).length;
+        if (messageWordCount > 100) {
+          alert(
+            "Please limit your message to 100 words OR Contact me instead :)"
+          );
+          return;
+        }
+
+        // Create a new message element
+        const messageElement = document.createElement("div");
+        messageElement.classList.add("message"); // Add the .message class
+        messageElement.innerHTML = `<strong>${name}:</strong> ${message}`;
+
+        // Append the message to the "messages" section
+        const messagesSection = document.querySelector(".messages");
+        messagesSection.appendChild(messageElement);
+
+        // Send the message data to the PHP script using AJAX
+        $.ajax({
+          type: "POST",
+          url: "save_message.php",
+          data: { name: name, message: message },
+          success: function (data) {
+            // Parse the JSON response from PHP
+            const response = JSON.parse(data);
+
+            // Display the response directly on the page
+            document.getElementById("message-status").innerHTML =
+              response.response;
+
+            // Remove the message status after 5 seconds
+            setTimeout(() => {
+              document.getElementById("message-status").innerHTML = "";
+            }, 5000);
+          },
+          error: function () {
+            alert("Failed to send the message. Please try again.");
+          },
+        });
+
+        // Clear the input fields after sending the message
+        document.getElementById("name").value = "";
+        document.getElementById("message").value = "";
+
+        // Set a timeout to fade out the message after 5 seconds
+        setTimeout(() => {
+          messageElement.style.opacity = 0;
+          // Remove the message from the DOM after the animation ends
+          messageElement.addEventListener("animationend", () => {
+            messagesSection.removeChild(messageElement);
+          });
+        }, 5000);
+      }
+
+      // Attach the sendMessage function to the button click event
+      const submitButton = document.getElementById("submit-btn");
+      submitButton.addEventListener("click", sendMessage);
+    </script>
+  </body>
+</html>

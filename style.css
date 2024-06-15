@@ -1,0 +1,82 @@
+*{
+  margin:0;
+}
+body,html  {
+    color:black;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-image:url("R1.jpeg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    height: 100vh;
+    border:  4px black solid ;
+    animation: fadein 3s forwards;
+  }
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .container {  
+  
+    background-image: linear-gradient(to bottom right, rgb(66, 198, 242),rgb(244, 244, 95)); 
+    max-width: 350px;
+    margin:300px auto;
+    padding: 20px 20px;
+    background-color:transparent;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   animation:  infinite;
+  }
+  
+  h2 {
+    margin: 5px;
+    text-align: center;
+  
+  }
+  
+  input {
+    display: block;
+    width: 300px;;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #c3daa2;
+    border-radius: 4px;
+  }
+  
+  input[type="submit"] {
+    width:200px;
+    background-color: #4CAF50;
+    color: #b0d4e8;
+    cursor: pointer;
+    /* margin-left:40px; */
+    border: none;
+    
+  }
+  
+  input[type="submit"]:hover {
+    background-color:#0383cd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: simplefloat 1s forwards;
+  }
+
+
+ @keyframes simplefloat {
+  0%{
+    width:200px;
+  }
+  100%{
+    width: 250px;
+  
+  }
+  
+ } 
+
+ a {
+  text-decoration: none;
+  font-size:1rem ;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #20bdd6;
+ }
