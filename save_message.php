@@ -1,9 +1,9 @@
 <?php
 // Replace the database connection details with your own
-$servername = "";
-$username = "";
+$servername = "localhost";
+$username = "root";
 $password = "";
-$dbname = "";
+$dbname = "simarxjeetdb";
 
 $response = ""; // Initialize 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     die("Connection failed: " . $conn->connect_error);
   }
 //insert message , also insert table name here-------
-  $stmt = $conn->prepare("INSERT INTO ------ (name, message) VALUES (?, ?)");
+  $stmt = $conn->prepare("INSERT INTO zulf_messages (name, message) VALUES (?, ?)");
   $stmt->bind_param("ss", $name, $message);
 
   if ($stmt->execute()) {
